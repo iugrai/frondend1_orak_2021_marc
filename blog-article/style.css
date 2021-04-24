@@ -49,9 +49,8 @@ body {
 .author {
   text-align: center;
   margin-right: 20px;
-grid-column-start: sidebar;
-grid-column-end: content-start ;
-
+  grid-column-start: sidebar;
+  grid-column-end: content-start;
 }
 
 .main .author {
@@ -74,13 +73,17 @@ grid-column-end: content-start ;
   margin: 0;
 }
 
+.comments-count {
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
 .main-title,
 .subheading,
 .main p,
 .main .comments-count {
-grid-column-start: content-start;
-grid-column-end: content-end;
-
+  grid-column-start: content-start;
+  grid-column-end: content-end;
 }
 
 .subheading {
@@ -106,14 +109,16 @@ grid-column-end: content-end;
 
 .quote {
   font-style: italic;
+  position: relative;
 }
 
 .quote::before {
-}
-
-.comments-count {
-  margin-top: 1rem;
-  font-size: 2rem;
+  position: absolute;
+  width: 8px;
+  height: 100%;
+  background-color: blue;
+  content: "";
+  left: -30px;
 }
 
 /* --------------------------------  comment section is grid  --------------------------------- */
@@ -126,10 +131,9 @@ grid-column-end: content-end;
 
 .comment,
 .comment-add {
-  display:grid;
+  display: grid;
   grid-template-columns: [sidebar] 15vw [content-start] 50vw [content-end];
 }
-
 
 .comment {
   margin-bottom: 1.7vw;
@@ -140,9 +144,6 @@ grid-column-end: content-end;
 
 .comment:last-child {
   border-bottom: none;
-}
-
-.comment-text {
 }
 
 .comments-count .fa-comment {
@@ -170,8 +171,9 @@ grid-column-end: content-end;
 
 .form-container {
   grid-column: content-start/content-end;
+
   /* another grid inside the grid */
-  display:grid;
+  display: grid;
   grid-template-columns: 60% 35%;
   grid-column-gap: 5%;
   grid-row-gap: 20px;
