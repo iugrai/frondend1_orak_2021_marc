@@ -244,6 +244,7 @@ header {
     text-align: center;
     z-index: -1;
     width: 50%;
+    display: none;
   }
 
   header .main-menu ul {
@@ -267,10 +268,22 @@ header {
   }
 }
 
+.page-title {
+  font-size: 3rem;
+}
+
 .js-hidden {
   display: none;
 }
 
+.page-subtitle {
+  font-size: 1.5rem;
+}
+
 .js-menu-open {
   right: 50%;
+}
+
+.main-menu.js-show {
+  display: block;
 }
