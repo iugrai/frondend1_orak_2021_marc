@@ -47,4 +47,4 @@ const observer = new IntersectionObserver(function (entries) {
   }
 });
 
-observer.observe(counter);
+observe.robserve(counter);
